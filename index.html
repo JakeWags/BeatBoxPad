@@ -11,11 +11,16 @@
     // DONT WORRY ABOUT IT, AS THE AUDIO STILL PLAYS WHEN BUTTON IS CLICKED
     // THE ERROR IS ONLY THROWN LOCALLY AS IT IS ONLY FOR CHROME'S ACCESS TO LOCAL FILES
 
-    let sound = new Howl({
-      src: ['./audio/vanDoor.mp3'],
+    let base = new Howl({
+      src: ['./audio/deepsub.wav'],
+    });
+
+    let snare = new Howl({
+      src: ['./audio/lightsnare.wav']
     });
     </script>
 
-    <button onclick="sound.play()">Close the van door!</button>
+    <button onclick="base.play()">Base</button>
+    <button onclick="snare.play()">Snare</button>
   </body>
 </html>
