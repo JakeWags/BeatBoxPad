@@ -1,0 +1,40 @@
+@white: #fff;
+@black: #000;
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: verdana;
+  font-size: 20px;
+}
+
+.soundboard-container {
+  height: 70%;
+  width: 100%;
+}
+
+.soundboard-item {
+  display: block;
+  margin-top: 1%;
+  background-color: #182233;
+  border: 2px @black solid;
+  width: 20%;
+  height: 10%;
+  text-align: center;
+  -webkit-transition: opacity 2s;
+  transition: opacity 0.25s;
+}
+
+.soundboard-item:hover {
+  opacity: 0.8;
+}
+
+.soundboard-item-name {
+  color: @white;
+  margin: auto;
+}

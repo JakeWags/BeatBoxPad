@@ -3,24 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Testing Howler</title>
+    <link rel="stylesheet/less" type="text/css" href="./stylesheet.less"/>
     <script src="./libs/howler.js"></script>
+    <script src="./libs/less.js" type="text/javascript"></script>
   </head>
   <body>
-    <script>
-    // THIS THROWS AN ERROR INTO DEV TOOLS ON Chrome
-    // DONT WORRY ABOUT IT, AS THE AUDIO STILL PLAYS WHEN BUTTON IS CLICKED
-    // THE ERROR IS ONLY THROWN LOCALLY AS IT IS ONLY FOR CHROME'S ACCESS TO LOCAL FILES
-
-    let base = new Howl({
-      src: ['./audio/deepsub.wav'],
-    });
-
-    let snare = new Howl({
-      src: ['./audio/lightsnare.wav']
-    });
-    </script>
-
-    <button onclick="base.play()">Base</button>
-    <button onclick="snare.play()">Snare</button>
+    <!-- SOUNDBOARD -->
+    <div class="soundboard-container">
+      <div class="soundboard-item" onclick="sounds[0].play()"><span class="soundboard-item-name">Bass</span></div>
+      <div class="soundboard-item" onclick="sounds[1].play()"><span class="soundboard-item-name">Snare</span></div>
+      <div class="soundboard-item" onclick="sounds[2].play()"><span class="soundboard-item-name">Cymbal</span></div>
+    </div>
+    <!-- END SOUNDBOARD -->
+    <script type="text/javascript" src="./scripts/BeatBoxPad.js"></script>
   </body>
 </html>
