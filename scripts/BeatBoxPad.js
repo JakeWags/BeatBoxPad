@@ -1,20 +1,32 @@
 /*
-@author: Jake Wagoner
-@author: Josh Madsen
 
-Using Howler.js
+* @author: Jake Wagoner
+* @author: Josh Madsen
+
+  Using Howler.js
+
 */
 
-// put label in "buttonLabels" as well as filepath from HTML file
+/*
+
+  To load files, just put file into 'audio' folder and put the localPath from the HTML file into the filePaths array.
+  Then, put the name you want on the button in the buttonLabels array.   ***Make sure label is in same array index position***
+
+*/
+
 let filePaths = [
   './audio/basskick.wav',
   './audio/lightsnare.wav',
-  './audio/cymbal.wav'
+  './audio/cymbal.wav',
+  './audio/subkick2.wav',
+  './audio/chicken.wav',
 ];
 let buttonLabels = [
   'Bass',
   'Snare',
-  'Cymbal'
+  'Cymbal',
+  'Sub Kick',
+  'Chicken',
 ];
 let sounds = [];
 
