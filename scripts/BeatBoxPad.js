@@ -30,6 +30,9 @@ let buttonLabels = [
 ];
 
 let buttonsPerRow = parseInt(document.getElementById("BeatBoxPad").getAttribute("data-buttonsPerRow"));
+  if (isNaN(buttonsPerRow)) {
+    buttonsPerRow = 3;
+  };
   if (buttonsPerRow > 5) {
     buttonsPerRow = 5;
     alert('Maximum buttons per row is 5');
