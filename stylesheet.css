@@ -16,17 +16,18 @@ body {
 }
 
 .soundboard-item {
-  display: block;
+  display: inline-block;
+  margin-right: 1%;
   margin-top: 1%;
   background-color: #182233;
   border: 2px #000 solid;
-  width: 20%;
   height: 10%;
   text-align: center;
   -webkit-transition: opacity 0.25s;
   transition: opacity 0.25s;
   color: #fff;
 }
+
 
 .soundboard-item:hover {
   opacity: 0.8;

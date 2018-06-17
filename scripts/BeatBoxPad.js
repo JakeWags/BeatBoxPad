@@ -28,7 +28,15 @@ let buttonLabels = [
   'Sub Kick',
   'Chicken',
 ];
+
+let buttonsPerRow = parseInt(document.getElementById("BeatBoxPad").getAttribute("data-buttonsPerRow"));
+  if (buttonsPerRow > 5) {
+    buttonsPerRow = 5;
+    alert('Maximum buttons per row is 5');
+  }
+
 let sounds = [];
+
 
 // Dynamically creates a div element for every filepath loaded.
 const createSoundboardItem = (i) => {
@@ -36,6 +44,7 @@ const createSoundboardItem = (i) => {
   let text = document.createTextNode(buttonLabels[i]);
   div.className = "soundboard-item";
   div.onclick = () => {sounds[i].play()};
+  div.style = "width: " + ((100 / buttonsPerRow)-3) + "%";
   div.appendChild(text);
   document.getElementById("div-container").appendChild(div);
 }
