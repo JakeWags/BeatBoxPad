@@ -9,25 +9,12 @@
 
 /*
 
-  To load files, just put file into 'audio' folder and put the localPath from the HTML file into the filePaths array.
-  Then, put the name you want on the button in the buttonLabels array.   ***Make sure label is in same array index position***
+  To load files, just put file into 'audio' folder and put the localPath from the HTML file into the filePaths array inside filePaths.js.
+  Then, put the name you want on the button in the buttonLabels array inside buttonLabels.js.
+
+  ***Make sure label is in same array index position as the filepath***
 
 */
-
-let filePaths = [
-  './audio/basskick.wav',
-  './audio/lightsnare.wav',
-  './audio/cymbal.wav',
-  './audio/subkick2.wav',
-  './audio/chicken.wav',
-];
-let buttonLabels = [
-  'Bass',
-  'Snare',
-  'Cymbal',
-  'Sub Kick',
-  'Chicken',
-];
 
 let buttonsPerRow = parseInt(document.getElementById("BeatBoxPad").getAttribute("data-buttonsPerRow"));
   if (isNaN(buttonsPerRow)) {
@@ -39,7 +26,6 @@ let buttonsPerRow = parseInt(document.getElementById("BeatBoxPad").getAttribute(
   }
 
 let sounds = [];
-
 
 // Dynamically creates a div element for every filepath loaded.
 const createSoundboardItem = (i) => {
